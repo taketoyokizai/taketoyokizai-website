@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="news.js"></script>
+    <script src="keys.js"></script>
+    <title>株式会社竹豐機材</title>
+</head>
+
+<body>
+    <div id="lp-container">
+
+
+
+        <nav class="nav-bar-wrap">
+            <span class="logo">
+                <a href="index.html"> <img src="./img/taketoyo-logo-logoletter01.png"></a>
+            </span>
+
+            <ol>
+                <li class="menu-item"><a href="about.html">会社概要</a></li>
+                <li class="menu-item"><a href="service.html">事業内容</a></li>
+                <li class="menu-item">
+                    <a href="#0">ナイロンコーティングについて</a>
+                    <ol class="sub-menu">
+                        <li class="sub-menu-item"><a href="feature.html">特性・性能</a></li>
+                        <li class="sub-menu-item"><a href="product.html">加工物</a></li>
+                        <li class="sub-menu-item"><a href="process.html">製造工程</a></li>
+                    </ol>
+                </li>
+
+            </ol>
+            <span class="bar"></span>
+
+
+            <span class="contact-btn" id="contact"><a href="contact.html">
+                    <img src="./img/icon-mail-white.png" alt="">
+                    <p>お問い合わせ</p>
+                </a>
+            </span>
+        </nav>
+
+
+
+        <!-- nav for mobile menu -->
+        <div id="mySidenav" class="sidenav">
+
+            <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mobile-menu-items">
+
+                <a class="sub-nav" onclick="closeNav()" href="about.html">
+                    会社概要
+                </a>
+                <a class="sub-nav" onclick="closeNav()" href='service.html'>
+                    事業内容
+                </a>
+                <a class="sub-nav" onclick="closeNav()" href='feature.html'>
+                    特性・性能
+                </a>
+                <a class="sub-nav" onclick="closeNav()" href='product.html'>
+                    加工物
+                </a>
+                <a class="sub-nav" onclick="closeNav()" href='process.html'>
+                    製造工程
+                </a>
+                <a class="sub-nav" onclick="closeNav()" href='contact.html'>
+                    お問い合わせ
+                </a>
+
+                <a id="call-btn" onclick="closeNav()" href="tel:0563-59-8165">
+                    <img src="./img/call.png" alt="">
+                    <p>0563-59-8165</p>
+                </a>
+
+            </div>
+        </div>
+        <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
+
+
+
+
+
+        <!-- slide show imgs -->
+
+        <div class="container" data-autoplay="true">
+
+            <div id="message-onslide">
+                <p>高いコーティング技術、</p>
+                <p>45年の実績</p>
+            </div>
+
+            <div class="slide mid">
+                <img src="./img/lmimg.png" alt="nature" />
+            </div>
+            <div class="slide mid">
+                <img src="./img/plates.jpg" alt="nature" />
+            </div>
+            <div class="slide mid">
+                <img src="./img/coating.jpg" alt="nature" />
+            </div>
+
+
+        </div>
+        <div class="dots_container" id="indicator"></div>
+
+
+        <div id="business-content-container">
+            <div class="business-content-text-wrap">
+                <div class="title-wrap">
+                    <h2>事業内容</h2>
+                    <div class="underlinewrap">
+                        <span class="blueline"></span>
+                        <span class="grayline"></span>
+                    </div>
+                </div>
+                <p>当社は金属の樹脂コーティングを行う専門会社です。
+                    45年の実績と高い技術で、小ロット品にも柔軟に対応。
+                    白色ナイロンコーティングを主軸に、高い密着性と
+                    美しい仕上がりを提供します。</p>
+                <a href="service.html" class="btn-detail">詳しく見る</a>
+
+            </div>
+
+            <div class="business-content-img-wrap">
+                <img src="./img/office.png" alt="">
+            </div>
+        </div>
+
+
+        <div id="submenu-container">
+            <div class="submenu-imgs-wrap">
+                <a href="about.html" id="about-linkbox">
+                    <p>会社概要</p>
+                    <p>ご挨拶</p>
+                </a>
+                <a href="feature.html" id="feature-linkbox">
+                    <p>特性・性能</p>
+                </a>
+            </div>
+            <div class="submenu-imgs-wrap">
+                <a href="product.html" id="product-linkbox">
+                    <p>加工物</p>
+
+                </a>
+                <a href="process.html" id="process-linkbox">
+                    <p>製造工程</p>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div id="news-container">
+            <div id="news-left-wrap">
+                <div class="title-wrap">
+                    <h2>新着情報</h2>
+                    <div class="underlinewrap">
+                        <span class="blueline"></span>
+                        <span class="grayline"></span>
+                    </div>
+                </div>
+                <a href="https://taketoyokizai.blogspot.com/">
+                    <p>新着情報一覧へ</p>
+                    <div id="arrow-img">
+                        <img src="img/whitearrow.png" alt="">
+                    </div>
+                </a>
+            </div>
+
+
+            <div id="news-content-wrap">
+
+            </div>
+
+        </div>
+
+
+
+        <footer>
+            <div id="footer-content-wrap">
+                <div id="company-info-wrap">
+                    <div id="company-info-left">
+                        <img src="./img/taketoyo-logo-logoletter01.png" alt="">
+
+                        <div id="company-info-address-wrap">
+                            <p>〒444-0305</p>
+                            <p>愛知県西尾市平坂町奥辰24番地</p>
+                            <p>TEL.0563-59-8165（平日9:00～18:00）</p>
+                            <p>FAX.0563-59-3844</p>
+                        </div>
+                    </div>
+                    <div id="company-info-right">
+
+                        <div class="site-map">
+                            <a href="about.html">会社概要</a>
+                            <a href="service.html">事業内容</a>
+                            <a href="feature.html">特性・性能</a>
+
+                        </div>
+                        <div class="site-map">
+                            <a href="product.html">加工物</a>
+                            <a href="process.html">製造工程</a>
+                            <a href="https://taketoyokizai.blogspot.com/">新着情報</a>
+                            <a href="contact.html">お問い合わせ</a>
+                        </div>
+
+                    </div>
+                </div>
+                <p>@2026 株式会社竹豐機材</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="news.js"></script>
+    <script src="keys.js"></script>
+</body>
+
+</html>
