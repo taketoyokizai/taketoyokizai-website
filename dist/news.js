@@ -1,4 +1,6 @@
 
+const BLOGGER_API_ID = process.env.BLOGGER_API_ID;
+const BLOGGER_API_KEY = process.env.BLOGGER_API_KEY;
 
 function get_result() {
 
