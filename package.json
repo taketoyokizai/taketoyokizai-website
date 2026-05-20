@@ -1,7 +1,6 @@
 {
   "name": "taketoyokizai-website",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "gh-pages": "^6.3.0"
@@ -20,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/taketoyokizai/taketoyokizai-website/issues"
   },
-  "homepage": "https://github.com/taketoyokizai/taketoyokizai-website#readme"
+  "homepage": "https://github.com/taketoyokizai/taketoyokizai-website#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
 }
