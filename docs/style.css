@@ -735,10 +735,11 @@ button {
     .submenu-imgs-wrap a p {
         font-size: 1.2em;
     }
-#submenu-container {
 
-    margin-bottom   : 20vh;
-}
+    #submenu-container {
+
+        margin-bottom: 20vh;
+    }
 
 }
 
@@ -1106,4 +1107,26 @@ button {
         font-size: .6em;
     }
 
+}
+
+
+
+
+/* subpage */
+/* about us */
+
+.subpages-main-container {
+    display         : flex;
+    flex-direction  : column;
+    margin          : 0 auto;
+    background-color: #b0d5dc;
+    width           : 90%;
+}
+
+.header-subpages {
+    background-color: antiquewhite;
+}
+
+.header-subpages-link-wrap {
+    display: flex;
 }

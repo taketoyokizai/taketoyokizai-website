@@ -1,11 +1,121 @@
 <!DOCTYPE html>
 <html lang="jp">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="news.js"></script>
+    <script src="keys.js"></script>
     <title>会社概要・挨拶</title>
+
+
 </head>
+
 <body>
-    
+    <nav class="nav-bar-wrap">
+        <span class="logo">
+            <a href="index.html"> <img src="./img/taketoyo-logo-logoletter01.png"></a>
+        </span>
+
+        <ol>
+            <li class="menu-item"><a href="about.html">会社概要</a></li>
+            <li class="menu-item"><a href="service.html">事業内容</a></li>
+            <li class="menu-item">
+                <a href="#0">ナイロンコーティングについて</a>
+                <ol class="sub-menu">
+                    <li class="sub-menu-item"><a href="feature.html">特性・性能</a></li>
+                    <li class="sub-menu-item"><a href="product.html">加工物</a></li>
+                    <li class="sub-menu-item"><a href="process.html">製造工程</a></li>
+                </ol>
+            </li>
+
+        </ol>
+        <span class="bar"></span>
+
+
+        <span class="contact-btn" id="contact"><a href="contact.html">
+                <img src="./img/icon-mail-white.png" alt="">
+                <p>会社概要・挨拶|ABOUT US</p>
+            </a>
+        </span>
+    </nav>
+
+
+    <!-- nav for mobile menu -->
+    <div id="mySidenav" class="sidenav">
+
+        <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="mobile-menu-items">
+
+            <a class="sub-nav" onclick="closeNav()" href="about.html">
+                会社概要
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='service.html'>
+                事業内容
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='feature.html'>
+                特性・性能
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='product.html'>
+                加工物
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='process.html'>
+                製造工程
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='https://taketoyokizai.blogspot.com/'>
+                新着情報
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='contact.html'>
+                お問い合わせ
+            </a>
+
+            <a id="call-btn" onclick="closeNav()" href="tel:0563-59-8165">
+                <img src="./img/call.png" alt="">
+                <p>0563-59-8165</p>
+            </a>
+
+        </div>
+    </div>
+    <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
+
+
+
+
+    <div class="subpages-main-container">
+        <div class="header-subpages">
+            <div class="header-subpages-link-wrap"><a href="index.html">HOME</a>
+                <p>> 会社概要・挨拶</p>
+            </div>
+            <div class="header-subpages-img-wrap">
+                <div class="header-subpages-text-wrap">
+                    <p class="header-subpages-text-eng">ABOUT US</p>
+                    <p class="header-subpages-text-jpn">会社概要</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subpage-section-container">
+            <div class="subpage-title-wrap">
+                <h2 class="subpage-title-text"></h2>
+                <div class="underlinewrap">
+                    <span class="blueline"></span>
+                    <span class="grayline"></span>
+                </div>
+            </div>
+            <div class="subpage-section-text-container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio veniam repellat, voluptatibus
+                    molestias, officia, excepturi corporis ad tenetur doloremque possimus dolor expedita! Dicta, earum.
+                    Minima magnam voluptatem, quia adipisci rem animi aliquid necessitatibus delectus dolor quas sed
+                    ipsam accusamus, esse veniam excepturi quidem, fugiat magni iusto aspernatur vero numquam saepe.</p>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
