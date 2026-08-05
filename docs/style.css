@@ -1130,3 +1130,29 @@ button {
 .header-subpages-link-wrap {
     display: flex;
 }
+
+.header-subpages-img-wrap {
+    background-image: url(./img/product-footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height:15vh;
+}
+
+.header-subpages-text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.header-subpages-text-eng {
+    color: white;
+    /* font-family: ; */
+}
+.header-subpages-text-jpn {
+    font-size: 1.5em;
+    font-weight: 900;
+}
