@@ -1116,43 +1116,94 @@ button {
 /* about us */
 
 .subpages-main-container {
-    display         : flex;
-    flex-direction  : column;
-    margin          : 0 auto;
-    background-color: #b0d5dc;
-    width           : 90%;
+    display            : flex;
+    flex-direction     : column;
+    margin             : 0 auto;
+    /* background-color: #b0d5dc; */
+    max-width          : 1000px;
 }
 
-.header-subpages {
+/* .header-subpages {
     background-color: antiquewhite;
-}
+} */
 
 .header-subpages-link-wrap {
     display: flex;
+    margin : .5em 0;
+}
+
+.header-subpages-link-wrap>a,
+.header-subpages-link-wrap>p {
+    font-size  : .8em;
+    font-family: "Noto Serif JP", serif;
 }
 
 .header-subpages-img-wrap {
-    background-image: url(./img/product-footer.jpg);
+    background-image   : url(./img/product-footer.jpg);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    height:15vh;
+    background-repeat  : no-repeat;
+    background-size    : 100% auto;
+    height             : 25vh;
 }
 
 .header-subpages-text-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+    display        : flex;
+    flex-direction : column;
+    align-items    : start;
     justify-content: center;
-    height: 100%;
+    height         : 100%;
+    margin-left    : 2em;
 }
 
 
 .header-subpages-text-eng {
-    color: white;
+    color         : white;
     /* font-family: ; */
 }
+
 .header-subpages-text-jpn {
-    font-size: 1.5em;
+    font-size  : 1.5em;
     font-weight: 900;
+}
+
+.subpage-section-container {
+    /* background-color: #b0d5dc; */
+    margin-top    : 6em;
+    display       : flex;
+    flex-direction: column;
+
+}
+
+.subpage-title-text {
+    font-size: 2 em;
+}
+
+.subpage-section-container .subpage-title-text {
+    font-weight: bold;
+}
+
+.subpage-section-text-container>p {
+    margin     : 0 1em;
+    font-weight: 700;
+    font-size  : 1em;
+}
+
+.subpage-section-text-container>.text-wrap {
+    margin-top : 3em;
+    margin-left: auto;
+    width      : fit-content;
+
+}
+
+.subpage-section-text-container>.text-wrap>p {
+    font-weight: 900;
+    font-size  : 1em;
+    font-family: "Noto Serif JP", serif;
+}
+
+.subpage-section-text-container>.text-wrap>p>span {
+    font-size  : 2em;
+    font-weight: 900;
+    font-family: "Noto Serif JP", serif;
+    margin-left: 1em
 }
