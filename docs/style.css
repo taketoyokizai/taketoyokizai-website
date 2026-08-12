@@ -1207,3 +1207,25 @@ button {
     font-family: "Noto Serif JP", serif;
     margin-left: 1em
 }
+
+.company-info-wrap {
+
+    border-bottom : lightgray solid 1px;
+    display       : flex;
+    flex-direction: row;
+    padding       : 2em 0;
+    font-size     : .8em;
+    font-weight   : 900;
+    font-family   : "Noto Serif JP", serif;
+}
+
+.company-info-name {
+    width      : 40%;
+    margin-left: 4em;
+    display    : flex;
+    align-items: center;
+}
+
+.company-info-value {
+    width: 60%;
+}
