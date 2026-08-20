@@ -518,41 +518,48 @@ button {
 
 
 .business-content-text-wrap {
-    display            : flex;
-    flex-direction     : column;
-    justify-content    : center;
-    align-items        : center;
-    /* background-color: antiquewhite; */
-    width              : 50%;
-    margin-top         : 3em;
-    margin-bottom      : 3em;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    width          : 50%;
+    margin-top     : 3em;
+    margin-bottom  : 3em;
 }
 
 .business-content-text-wrap .title-wrap {
-    width: 90%;
+    width       : max-content;
+    margin-right: auto;
+}
+
+.title-wrap {
+    width: max-content;
 }
 
 .title-wrap h2 {
-    font-size  : 2em;
-    font-weight: 600;
+    font-size          : 2em;
+    font-weight        : 600;
+    width              : max-content;
+    /* background-color: beige; */
 }
 
 .underlinewrap {
     display       : flex;
     flex-direction: row;
     height        : .3em;
-    width         : 8em;
+    width         : 100%;
     margin-bottom : 3em;
+
 }
 
 .blueline {
     background-color: var(--blue);
-    width           : 2em;
+    width           : 20%;
 }
 
 .grayline {
     background-color: gray;
-    width           : 6em;
+    width           : 80%;
 }
 
 .business-content-text-wrap p {
@@ -605,7 +612,7 @@ button {
         font-size: 1.5em;
     }
 
-    .underlinewrap {
+    /* .underlinewrap {
 
         width        : 8em;
         margin-bottom: 3em;
@@ -618,7 +625,7 @@ button {
     .grayline {
         width: 4em;
     }
-
+ */
 
     .business-content-text-wrap p {
         font-size: .8em;
@@ -1136,6 +1143,7 @@ button {
 .header-subpages-link-wrap>p {
     font-size  : .8em;
     font-family: "Noto Serif JP", serif;
+    color      : black;
 }
 
 .header-subpages-img-wrap {
@@ -1157,8 +1165,12 @@ button {
 
 
 .header-subpages-text-eng {
-    color         : white;
-    /* font-family: ; */
+    color                 : white;
+    font-family           : "Outfit", sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight           : 800;
+    font-size             : .8em;
+    font-style            : normal;
 }
 
 .header-subpages-text-jpn {
@@ -1169,13 +1181,38 @@ button {
 .subpage-section-container {
     /* background-color: #b0d5dc; */
     margin-top    : 6em;
+    margin-bottom : 10em;
     display       : flex;
     flex-direction: column;
 
 }
 
+.subpage-title-wrap {
+    /* background-color: aquamarine; */
+    width: max-content;
+}
+
+/* for 4 letters */
+.underlinewrap .blueline {
+    width: 20%;
+}
+
+.underlinewrap .grayline {
+    width: 80%;
+}
+
+/* .blueline {
+    width: 1/3em;
+}
+
+.grayline.3letters {
+    width: 2/3em;
+} */
+
 .subpage-title-text {
-    font-size: 2 em;
+    font-size          : 2em;
+    /* background-color: antiquewhite; */
+    width              : max-content;
 }
 
 .subpage-section-container .subpage-title-text {
@@ -1214,9 +1251,13 @@ button {
     display       : flex;
     flex-direction: row;
     padding       : 2em 0;
-    font-size     : .8em;
-    font-weight   : 900;
+    font-size     : 1em;
+    font-weight   : bold;
     font-family   : "Noto Serif JP", serif;
+}
+
+.company-info-wrap iframe {
+    margin-top: 3em;
 }
 
 .company-info-name {

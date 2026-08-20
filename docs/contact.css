@@ -1,0 +1,837 @@
+* {
+    box-sizing         : border-box;
+    text-decoration    : none;
+    margin             : 0;
+    font-family        : "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-weight        : 400;
+    font-style         : normal;
+}
+
+:root {
+    --darknavy : #00323d;
+    --lightblue: #b0d5dc;
+    --blue     : #007893;
+}
+
+#contact-page .subpage-section-container {
+    margin: 5em 0;
+}
+
+#contactForm {
+    margin-bottom: 5em;
+}
+
+.note {
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    justify-content: center;
+    font-weight    : 600;
+    font-size      : 1em;
+    margin-bottom  : 2em;
+}
+
+.note span {
+    font-weight: 900;
+    color      : var(--blue);
+    font-size  : 1.2em;
+}
+
+/* ========================================
+   Form Row
+======================================== */
+.form-row {
+    /* background-color: #007893; */
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    justify-content: center;
+
+
+    width     : 100%;
+    min-height: 82px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.form-label {
+
+    flex: 0 0 270px;
+
+    padding-right: 20px;
+
+    font-size  : 16px;
+    font-weight: 700;
+    line-height: 1.6;
+
+    white-space: nowrap;
+
+}
+
+.form-control {
+    flex     : 0 0 520px;
+    width    : 520px;
+    max-width: 100%;
+
+    padding: 18px 0;
+}
+
+
+#first-wrap {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    width          : fit-content;
+    margin         : 0 auto;
+}
+
+/* ========================================
+   Required Label
+======================================== */
+
+.required {
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: center;
+
+    margin-left: 8px;
+    padding    : 4px 7px;
+
+    background: #008fa3;
+    color     : #fff;
+
+    font-size  : 11px;
+    font-weight: 700;
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   Input
+======================================== */
+
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control input[type="tel"],
+.form-control textarea {
+    display: block;
+
+    width        : 100%;
+    border       : 0;
+    border-radius: 0;
+
+    background: #f1f1f1;
+
+    padding: 12px 16px;
+
+    color      : #333;
+    font-family: inherit;
+    font-size  : 15px;
+
+    outline: none;
+}
+
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control input[type="tel"] {
+    height: 42px;
+}
+
+.form-control textarea {
+    min-height: 180px;
+    resize    : vertical;
+}
+
+
+/* Focus */
+
+.form-control input:focus,
+.form-control textarea:focus {
+    background: #eaf3f5;
+    box-shadow: inset 0 0 0 1px #008fa3;
+}
+
+
+/* Placeholder */
+
+.form-control input::placeholder,
+.form-control textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* ========================================
+   Radio
+======================================== */
+
+.radio-group {
+    display           : flex;
+    flex-direction    : row;
+    align-items       : center;
+    flex-wrap         : wrap;
+    /* justify-content: center; */
+
+    gap       : 20px;
+    width     : 520px;
+    /* width  : 100%; */
+    padding   : 0;
+}
+
+.radio-group label {
+    display            : flex;
+    align-items        : center;
+    /* background-color: blueviolet; */
+    gap                : 7px;
+
+    font-size  : 14px;
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+.radio-group input {
+    margin      : 0;
+    accent-color: #008fa3;
+}
+
+
+/* ========================================
+   郵便番号
+======================================== */
+
+.zipcode-area {
+    display    : flex;
+    align-items: center;
+    gap        : 10px;
+}
+
+.zipcode-area input {
+    flex : 0 0 150px;
+    width: 150px;
+}
+
+
+/* 住所検索 */
+
+.address-btn {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    height : 42px;
+    padding: 0 16px;
+
+    border-radius: 5px;
+
+    background: #394c5c;
+    color     : #fff;
+
+    font-size  : 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.address-btn:hover {
+    opacity: 0.85;
+}
+
+
+/* 検索中 */
+
+.address-btn.is-loading {
+    opacity       : 0.6;
+    pointer-events: none;
+}
+
+
+
+/* ========================================
+   Message
+======================================== */
+
+.form-row-message {
+    align-items: flex-start;
+}
+
+.form-row-message .form-label {
+    padding-top: 28px;
+}
+
+
+/* ========================================
+   Agreement
+======================================== */
+
+.agreement {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+
+    gap: 14px;
+
+    margin: 35px 0;
+}
+
+.agreement label {
+    display    : flex;
+    align-items: center;
+    gap        : 8px;
+
+    font-size  : 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.agreement input {
+    flex: 0 0 auto;
+
+    width : 17px;
+    height: 17px;
+
+    margin: 0;
+
+    accent-color: #008fa3;
+}
+
+
+/* ========================================
+   Submit
+======================================== */
+
+.submit-area {
+    display        : flex;
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+.submit-btn {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    width    : 355px;
+    max-width: 100%;
+    height   : 50px;
+
+    border       : 0;
+    border-radius: 5px;
+
+    background: #40576a;
+    color     : #fff;
+
+    font-family: inherit;
+    font-size  : 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 15px 50px;
+    }
+
+    .form-row {
+        display       : flex;
+        flex-direction: column;
+        align-items   : stretch;
+
+        min-height: auto;
+
+        padding: 20px 0;
+    }
+
+    .form-label {
+        flex: none;
+
+        width        : 100%;
+        padding      : 0;
+        margin-bottom: 10px;
+    }
+
+    .form-control {
+        flex: none;
+
+        width  : 100%;
+        padding: 0;
+    }
+
+
+    /* ラジオ */
+
+    .radio-group {
+        display       : flex;
+        flex-direction: column;
+        align-items   : flex-start;
+
+        gap: 12px;
+
+        padding: 0;
+    }
+
+
+    /* 郵便番号 */
+    .zipcode-area {
+        display       : flex;
+        flex-direction: row;
+        align-items   : center;
+
+        width: 100%;
+        gap  : 8px;
+    }
+
+    .zipcode-area input {
+        flex: 1 1 auto;
+
+        width    : auto;
+        min-width: 0;
+    }
+
+    .address-btn {
+        flex: 0 0 auto;
+
+        height : 44px;
+        padding: 0 13px;
+
+        font-size: 12px;
+    }
+
+
+    /* お問い合わせ内容 */
+
+    .form-row-message .form-label {
+        padding-top: 0;
+    }
+
+
+    /* 同意 */
+
+    .agreement {
+        align-items: flex-start;
+    }
+
+
+    /* ========================================
+   Form Error
+======================================== */
+
+    .form-error {
+        display: none;
+
+        width    : 790px;
+        max-width: 100%;
+
+        margin: 0 auto 15px;
+
+        color: #d60000;
+
+        font-size  : 14px;
+        font-weight: 700;
+        line-height: 1.8;
+    }
+
+    .form-error.is-visible {
+        display: block;
+    }
+
+    .form-error p {
+        margin: 0;
+    }
+
+
+
+
+
+
+    /* 送信 */
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Tablet */
+/* @media (max-width: 768px) {
+
+    body {
+        padding: 30px 20px 60px;
+    }
+
+    .contact {
+        width: 100%;
+    } */
+
+@media (max-width: 768px) {
+
+    .form-row {
+        display        : flex;
+        flex-direction : column;
+        align-items    : flex-start;
+        justify-content: flex-start;
+
+        min-height: auto;
+        padding   : 20px 0;
+    }
+
+    .form-label {
+        flex: none;
+
+        width  : 100%;
+        padding: 0;
+        margin : 0 0 10px;
+
+        text-align: left;
+    }
+
+    .form-control {
+        flex: none;
+
+        width    : 100%;
+        max-width: 100%;
+
+        padding: 0;
+
+        text-align: left;
+    }
+
+
+
+
+    /* ========================================
+     お問い合わせ種別
+  ======================================== */
+
+    .radio-group {
+        display       : flex;
+        flex-direction: column;
+        align-items   : flex-start;
+
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .radio-group label {
+        justify-content: flex-start;
+
+        width: auto;
+
+        font-size: 14px;
+    }
+
+
+    /* ========================================
+     郵便番号
+  ======================================== */
+
+    .zipcode-area {
+        display       : flex;
+        flex-direction: row;
+        align-items   : center;
+
+        width: 100%;
+        gap  : 10px;
+    }
+
+    .zipcode-area input {
+        flex : 0 1 150px;
+        width: 150px;
+    }
+
+    .address-btn {
+        flex: 0 0 auto;
+    }
+
+
+    /* ========================================
+     お問い合わせ内容
+  ======================================== */
+
+    .form-row-message {
+        align-items: flex-start;
+    }
+
+    .form-row-message .form-label {
+        padding-top: 0;
+    }
+
+
+    /* ========================================
+     同意
+  ======================================== */
+
+    .agreement {
+        display       : flex;
+        flex-direction: column;
+        align-items   : flex-start;
+
+        gap: 14px;
+
+        margin: 30px 0;
+    }
+
+    .agreement label {
+        display        : flex;
+        align-items    : flex-start;
+        justify-content: flex-start;
+
+        width: 100%;
+
+        text-align: left;
+    }
+
+
+    /* ========================================
+     送信
+  ======================================== */
+
+    .submit-area {
+        display        : flex;
+        justify-content: flex-start;
+
+        width     : 100%;
+        margin-top: 25px;
+    }
+
+    .submit-btn {
+        width    : 100%;
+        max-width: 355px;
+    }
+
+
+
+    /* ========================================
+   Smartphone
+   iPhone 7 / 8 / SEなど
+======================================== */
+
+    @media (max-width: 480px) {
+
+        body {
+            padding: 20px 15px 50px;
+        }
+
+
+        /* ========================================
+     Form
+  ======================================== */
+
+        .form-row {
+            padding: 18px 0;
+        }
+
+        .form-label {
+            margin-bottom: 9px;
+
+            font-size  : 15px;
+            line-height: 1.5;
+        }
+
+        .form-control {
+            width: 100%;
+        }
+
+
+        /* ========================================
+     Input
+  ======================================== */
+
+        .form-control input[type="text"],
+        .form-control input[type="email"],
+        .form-control input[type="tel"],
+        .form-control textarea {
+            width: 100%;
+
+            font-size: 16px;
+        }
+
+        .form-control input[type="text"],
+        .form-control input[type="email"],
+        .form-control input[type="tel"] {
+            height: 44px;
+        }
+
+        .form-control textarea {
+            min-height: 160px;
+        }
+
+
+        /* ========================================
+     Required
+  ======================================== */
+
+        .required {
+            margin-left: 6px;
+            padding    : 4px 6px;
+
+            font-size: 10px;
+        }
+
+
+        /* ========================================
+     Radio
+  ======================================== */
+
+        .radio-group {
+            display       : flex;
+            flex-direction: column;
+            align-items   : flex-start;
+
+            gap: 12px;
+        }
+
+        .radio-group label {
+            font-size: 14px;
+        }
+
+
+        /* ========================================
+     Zipcode
+  ======================================== */
+
+        .zipcode-area {
+            display       : flex;
+            flex-direction: row;
+            align-items   : center;
+
+            gap: 8px;
+        }
+
+        .zipcode-area input {
+            flex: 1 1 auto;
+
+            width    : auto;
+            min-width: 0;
+        }
+
+        .address-btn {
+            flex: 0 0 auto;
+
+            height : 44px;
+            padding: 0 13px;
+
+            font-size: 12px;
+        }
+
+
+        /* ========================================
+     Agreement
+  ======================================== */
+
+        .agreement {
+            display       : flex;
+            flex-direction: column;
+            align-items   : flex-start;
+
+            gap: 12px;
+
+            margin: 25px 0;
+        }
+
+        .agreement label {
+            display    : flex;
+            align-items: flex-start;
+
+            font-size  : 13px;
+            line-height: 1.6;
+        }
+
+        .agreement input {
+            flex: 0 0 auto;
+
+            width : 16px;
+            height: 16px;
+
+            margin-top: 2px;
+        }
+
+        .form-error {
+            width : 100%;
+            margin: 0 0 15px;
+
+            font-size : 13px;
+            text-align: left;
+        }
+
+
+
+        /* ========================================
+     Submit
+  ======================================== */
+
+        .submit-area {
+            display        : flex;
+            justify-content: flex-start;
+
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            width    : 100%;
+            max-width: none;
+            height   : 48px;
+
+            font-size: 15px;
+        }
+    }
+}
+
+/* ========================================
+   Very Small Smartphone
+   iPhone 7 375px以下にも対応
+======================================== */
+
+@media (max-width: 375px) {
+
+    body {
+        padding: 15px 12px 40px;
+    }
+
+    .form-row {
+        padding: 16px 0;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .radio-group label {
+        font-size: 13px;
+    }
+
+    .zipcode-area {
+        gap: 6px;
+    }
+
+    .address-btn {
+        padding  : 0 10px;
+        font-size: 11px;
+    }
+
+    .agreement label {
+        font-size: 12px;
+    }
+}

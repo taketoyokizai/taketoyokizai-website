@@ -8,9 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="contact.css">
+    <script defer　src="contact.js"></script>
+    <script src="main.js"></script>
     <script src="news.js"></script>
     <script src="keys.js"></script>
+
     <title>お問い合わせ</title>
 
 
@@ -46,44 +49,311 @@
     </nav>
 
 
-     <!-- nav for mobile menu -->
-        <div id="mySidenav" class="sidenav">
+    <!-- nav for mobile menu -->
+    <div id="mySidenav" class="sidenav">
 
-            <a href="" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="mobile-menu-items">
+        <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="mobile-menu-items">
 
-                <a class="sub-nav" onclick="closeNav()" href="about.html">
-                    会社概要
-                </a>
-                <a class="sub-nav" onclick="closeNav()" href='service.html'>
-                    事業内容
-                </a>
-                <a class="sub-nav" onclick="closeNav()" href='feature.html'>
-                    特性・性能
-                </a>
-                <a class="sub-nav" onclick="closeNav()" href='product.html'>
-                    加工物
-                </a>
-                <a class="sub-nav" onclick="closeNav()" href='process.html'>
-                    製造工程
-                </a>
-                <a class="sub-nav" onclick="closeNav()" href='https://taketoyokizai.blogspot.com/'>
-                    新着情報
-                </a>
-                <a class="sub-nav" onclick="closeNav()" href='contact.html'>
-                    お問い合わせ
-                </a>
+            <a class="sub-nav" onclick="closeNav()" href="about.html">
+                会社概要
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='service.html'>
+                事業内容
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='feature.html'>
+                特性・性能
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='product.html'>
+                加工物
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='process.html'>
+                製造工程
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='https://taketoyokizai.blogspot.com/'>
+                新着情報
+            </a>
+            <a class="sub-nav" onclick="closeNav()" href='contact.html'>
+                お問い合わせ
+            </a>
 
-                <a id="call-btn" onclick="closeNav()" href="tel:0563-59-8165">
-                    <img src="./img/call.png" alt="">
-                    <p>0563-59-8165</p>
-                </a>
+            <a id="call-btn" onclick="closeNav()" href="tel:0563-59-8165">
+                <img src="./img/call.png" alt="">
+                <p>0563-59-8165</p>
+            </a>
 
+        </div>
+    </div>
+    <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
+
+
+
+
+    <div class="subpages-main-container" id="contact-page">
+        <div class="header-subpages">
+            <div class="header-subpages-link-wrap">
+                <a href="index.html">HOME</a>
+                <p>&emsp;>&emsp;お問い合わせ</p>
+            </div>
+            <div class="header-subpages-img-wrap">
+                <div class="header-subpages-text-wrap">
+                    <p class="header-subpages-text-eng">CONTACT</p>
+                    <p class="header-subpages-text-jpn">お問い合わせ</p>
+                </div>
             </div>
         </div>
-        <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
+
+        <div class="subpage-section-container">
+            <div class="subpage-title-wrap">
+                <h2 class="subpage-title-text">お問い合わせフォーム</h2>
+                <div class="underlinewrap">
+                    <span class="blueline"></span>
+                    <span class="grayline"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="note"><span>お見積り</span>
+            <p>や</p><span>ご相談</span>
+            <p>等などお気軽にお問い合わせください。</p>
+        </div>
+
+
+
+
+        <form id="contactForm">
+
+
+
+            <!-- お問い合わせ種別 -->
+            <div class="form-row" id="first-wrap">
+                <label class="form-label">
+                    お問い合わせ種別
+                    <span class="required">必須</span>
+                </label>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="お問い合わせ種別" value="下地処理について" checked required>
+                        <span>下地処理について</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="お問い合わせ種別" value="コーティングについて">
+                        <span>コーティングについて</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="お問い合わせ種別" value="お見積り">
+                        <span>お見積り</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="お問い合わせ種別" value="その他">
+                        <span>その他</span>
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- 会社名 -->
+            <div class="form-row">
+                <label class="form-label" for="company">
+                    会社名
+                    <span class="required">必須</span>
+                </label>
+
+                <div class="form-control">
+                    <input type="text" id="company" name="会社名" placeholder="株式会社〇〇" required>
+                </div>
+            </div>
+
+
+            <!-- 部署名 -->
+            <div class="form-row">
+                <label class="form-label" for="department">
+                    部署名
+                </label>
+
+                <div class="form-control">
+                    <input type="text" id="department" name="部署名" placeholder="コーティング部門">
+                </div>
+            </div>
+
+
+            <!-- ご担当者名 -->
+            <div class="form-row">
+                <label class="form-label" for="name">
+                    ご担当者名
+                    <span class="required">必須</span>
+                </label>
+
+                <div class="form-control">
+                    <input type="text" id="name" name="ご担当者名" placeholder="山田太郎" required>
+                </div>
+            </div>
+
+
+            <!-- ふりがな -->
+            <div class="form-row">
+                <label class="form-label" for="kana">
+                    ご担当者名（ふりがな）
+                    <span class="required">必須</span>
+                </label>
+
+                <div class="form-control">
+                    <input type="text" id="kana" name="ご担当者名（ふりがな）" placeholder="やまだたろう" required>
+                </div>
+            </div>
+
+
+            <!-- メール -->
+            <div class="form-row">
+                <label class="form-label" for="email">
+                    メールアドレス
+                    <span class="required">必須</span>
+                </label>
+
+                <div class="form-control">
+                    <input type="email" id="email" name="メールアドレス" placeholder="test@email.com" required>
+                </div>
+            </div>
+
+
+            <!-- 電話番号 -->
+            <div class="form-row">
+                <label class="form-label" for="tel">
+                    電話番号
+                </label>
+
+                <div class="form-control">
+                    <input type="tel" id="tel" name="電話番号" placeholder="012-345-678">
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <label class="form-label" for="zipcode">
+                    郵便番号
+                    <span class="required">必須</span>
+                </label>
+
+                <div class="form-control">
+                    <div class="zipcode-area">
+                        <input type="text" id="zipcode" name="郵便番号" placeholder="123-4567" maxlength="8"
+                            inputmode="numeric" autocomplete="postal-code" required>
+                        <a href="#" class="address-btn" onclick="searchAddress(event)">
+                            住所検索
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <label class="form-label" for="address">
+                    住所
+                    <span class="required">必須</span>
+                </label>
+
+                <div class="form-control">
+                    <input type="text" id="address" name="住所" autocomplete="street-address" required>
+                </div>
+            </div>
+
+
+
+            <!-- お問い合わせ内容 -->
+            <div class="form-row form-row-message">
+                <label class="form-label" for="message">
+                    お問い合わせ内容
+                </label>
+
+                <div class="form-control">
+                    <textarea id="message" name="お問い合わせ内容" rows="8"></textarea>
+                </div>
+            </div>
+
+
+            <!-- 同意 -->
+            <div class="agreement">
+
+                <label>
+                    <input type="checkbox" id="notSales" name="営業目的ではありません" value="同意">
+                    <span>
+                        営業目的ではありません
+                        <span class="required">必須</span>
+                    </span>
+                </label>
+
+                <label>
+                    <input type="checkbox" id="privacyPolicy" name="プライバシーポリシー" value="同意">
+                    <span>
+                        <a href="/privacy-policy" target="_blank">
+                            プライバシーポリシー
+                        </a>
+                        に同意します
+                        <span class="required">必須</span>
+                    </span>
+                </label>
+
+            </div>
+
+
+            <!-- 送信 -->
+            <div class="submit-area">
+                <a href="#" id="submitBtn" class="submit-btn" onclick="searchAddress(event)">
+                    送信する
+                </a>
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+        <div id="footer-content-wrap">
+            <div id="company-info-wrap">
+                <div id="company-info-left">
+                    <img src="./img/taketoyo-logo-logoletter01.png" alt="">
+
+                    <div id="company-info-address-wrap">
+                        <p>〒444-0305</p>
+                        <p>愛知県西尾市平坂町奥辰24番地</p>
+                        <p>TEL.0563-59-8165（平日9:00～18:00）</p>
+                        <p>FAX.0563-59-3844</p>
+                    </div>
+                </div>
+                <div id="company-info-right">
+
+                    <div class="site-map">
+                        <a href="about.html">会社概要</a>
+                        <a href="service.html">事業内容</a>
+                        <a href="feature.html">特性・性能</a>
+
+                    </div>
+                    <div class="site-map">
+                        <a href="product.html">加工物</a>
+                        <a href="process.html">製造工程</a>
+                        <a href="https://taketoyokizai.blogspot.com/">新着情報</a>
+                        <a href="contact.html">お問い合わせ</a>
+                    </div>
+
+                </div>
+            </div>
+            <p>@2026 株式会社竹豐機材</p>
+        </div>
+    </footer>
+
 
 </body>
+<script src="contact.js"></script>
 
 </html>
-
