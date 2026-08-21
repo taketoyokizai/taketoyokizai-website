@@ -532,6 +532,11 @@ button {
     margin-right: auto;
 }
 
+#news-left-wrap .title-wrap {
+    margin-right: 2em;
+}
+
+
 .title-wrap {
     width: max-content;
 }
@@ -1125,14 +1130,15 @@ button {
 .subpages-main-container {
     display            : flex;
     flex-direction     : column;
+    align-items        : center;
     margin             : 0 auto;
     /* background-color: #b0d5dc; */
     max-width          : 1000px;
 }
 
-/* .header-subpages {
-    background-color: antiquewhite;
-} */
+.header-subpages {
+    width: 100%;
+}
 
 .header-subpages-link-wrap {
     display: flex;
@@ -1184,7 +1190,7 @@ button {
     margin-bottom : 10em;
     display       : flex;
     flex-direction: column;
-
+    width         : 100%;
 }
 
 .subpage-title-wrap {
@@ -1192,7 +1198,7 @@ button {
     width: max-content;
 }
 
-/* for 4 letters */
+
 .underlinewrap .blueline {
     width: 20%;
 }
@@ -1201,13 +1207,8 @@ button {
     width: 80%;
 }
 
-/* .blueline {
-    width: 1/3em;
-}
 
-.grayline.3letters {
-    width: 2/3em;
-} */
+
 
 .subpage-title-text {
     font-size          : 2em;
@@ -1246,14 +1247,16 @@ button {
 }
 
 .company-info-wrap {
-
-    border-bottom : lightgray solid 1px;
-    display       : flex;
-    flex-direction: row;
-    padding       : 2em 0;
-    font-size     : 1em;
-    font-weight   : bold;
-    font-family   : "Noto Serif JP", serif;
+    border-bottom      : lightgray solid 1px;
+    display            : flex;
+    flex-direction     : row;
+    padding            : 2em 0;
+    font-size          : 1em;
+    font-weight        : bold;
+    font-family        : "Noto Serif JP", serif;
+    /* background-color: aqua; */
+    justify-content    : space-between;
+    width              : 100%;
 }
 
 .company-info-wrap iframe {
@@ -1261,12 +1264,63 @@ button {
 }
 
 .company-info-name {
-    width      : 40%;
-    margin-left: 4em;
-    display    : flex;
-    align-items: center;
+    width              : 30%;
+    /* background-color: #fff; */
+    display            : flex;
+    align-items        : center;
+    justify-content    : center;
 }
 
 .company-info-value {
-    width: 60%;
+    width              : 50%;
+    /* background-color: beige; */
+}
+
+
+@media (max-width: 1200px) {
+    .subpages-main-container {
+        max-width      : 1000px;
+        justify-content: center;
+    }
+
+    .subpage-section-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 850px) {
+    .company-info-wrap iframe {
+        width: 90%;
+    }
+
+    .company-info-name {
+        width: 30%;
+
+    }
+
+    .company-info-value {
+        width: 60%;
+    }
+}
+
+@media (max-width: 490px) {
+    .company-info-wrap {
+        font-size: .8em;
+
+    }
+}
+
+@media (max-width: 390px) {
+    .subpage-section-container {
+        width: 95%;
+    }
+
+    .company-info-name {
+        width: 20%;
+
+    }
+
+    .company-info-value {
+        width: 70%;
+    }
 }

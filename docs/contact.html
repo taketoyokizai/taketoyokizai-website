@@ -104,7 +104,7 @@
         </div>
 
         <div class="subpage-section-container">
-            <div class="subpage-title-wrap">
+            <div class="subpage-title-wrap" id="contact-title-wrap">
                 <h2 class="subpage-title-text">お問い合わせフォーム</h2>
                 <div class="underlinewrap">
                     <span class="blueline"></span>
@@ -114,17 +114,19 @@
         </div>
 
 
-        <div class="note"><span>お見積り</span>
-            <p>や</p><span>ご相談</span>
-            <p>等などお気軽にお問い合わせください。</p>
-        </div>
+<div class="note">
+    <p>
+        <span>お見積り</span>や<span>ご相談</span>等などお気軽にお問い合わせください。
+    </p>
+</div>
 
 
 
 
         <form id="contactForm">
 
-
+    <!-- エラーメッセージ -->
+    <div id="formError" class="form-error"></div>
 
             <!-- お問い合わせ種別 -->
             <div class="form-row" id="first-wrap">
@@ -135,7 +137,7 @@
 
                 <div class="radio-group">
                     <label>
-                        <input type="radio" name="お問い合わせ種別" value="下地処理について" checked required>
+                        <input type="radio" name="お問い合わせ種別" value="下地処理について" required>
                         <span>下地処理について</span>
                     </label>
 

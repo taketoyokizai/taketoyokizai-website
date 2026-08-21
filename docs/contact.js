@@ -1,6 +1,6 @@
 
 
-// console.log('test')
+
 const form = document.getElementById("contactForm");
 
 
@@ -63,7 +63,7 @@ form.addEventListener("submit", function (event) {
 });
 
 
-
+// find zipcode
 
 async function searchAddress(event) {
 
@@ -137,15 +137,16 @@ async function searchAddress(event) {
 }
 
 
-
-const submitBtn = document.getElementById("submitBtn");
+// const form = document.getElementById("contactForm");
 const formError = document.getElementById("formError");
+const submitBtn = document.getElementById("submitBtn");
+
 
 submitBtn.addEventListener("click", function (event) {
 
     event.preventDefault();
 
-    // エラーをリセット
+    // 前回のエラーを消す
     formError.innerHTML = "";
     formError.classList.remove("is-visible");
 
@@ -153,7 +154,7 @@ submitBtn.addEventListener("click", function (event) {
 
 
     // ========================================
-    // 必須入力チェック
+    // 必須入力項目
     // ========================================
 
     const requiredFields = form.querySelectorAll(
@@ -162,12 +163,12 @@ submitBtn.addEventListener("click", function (event) {
 
     requiredFields.forEach(function (field) {
 
-        // ラジオボタンは後でチェックするので除外
+        // ラジオは別でチェック
         if (field.type === "radio") {
             return;
         }
 
-        // チェックボックスも後でチェック
+        // チェックボックスも別でチェック
         if (field.type === "checkbox") {
             return;
         }
@@ -220,22 +221,20 @@ submitBtn.addEventListener("click", function (event) {
 
 
     // ========================================
-    // エラー表示
+    // エラーがある場合
     // ========================================
 
     if (errors.length > 0) {
 
         formError.innerHTML =
             "<p>以下の項目をご確認ください。</p>" +
-            errors
-                .map(function (error) {
-                    return "<p>・" + error + "</p>";
-                })
-                .join("");
+            errors.map(function (error) {
+                return "<p>・" + error + "</p>";
+            }).join("");
 
         formError.classList.add("is-visible");
 
-        // エラー表示位置までスクロール
+        // エラー表示までスクロール
         formError.scrollIntoView({
             behavior: "smooth",
             block: "center"
@@ -246,7 +245,7 @@ submitBtn.addEventListener("click", function (event) {
 
 
     // ========================================
-    // エラーがなければ送信処理
+    // エラーがなければ送信
     // ========================================
 
     const data = getFormData();
@@ -254,3 +253,28 @@ submitBtn.addEventListener("click", function (event) {
     console.log("送信データ:", data);
 
 });
+
+
+
+function getFieldLabel(field) {
+
+    const label = form.querySelector(
+        `label[for="${field.id}"]`
+    );
+
+    if (!label) {
+        return field.name || field.id;
+    }
+
+    // labelをコピー
+    const clone = label.cloneNode(true);
+
+    // 「必須」を削除
+    const required = clone.querySelector(".required");
+
+    if (required) {
+        required.remove();
+    }
+
+    return clone.textContent.trim();
+}
