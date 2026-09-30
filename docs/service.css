@@ -1,0 +1,15 @@
+#service-page p{
+    font-family        : "Noto Serif JP", serif;
+
+    font-weight        : 600;
+    font-style         : normal;
+}
+
+
+.service-section-tag >span {
+    color: var(--blue);
+}
+
+.service-section-content {
+    margin-bottom: 2em;
+}
