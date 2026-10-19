@@ -1,15 +1,75 @@
-#service-page p{
-    font-family        : "Noto Serif JP", serif;
+#service-firstnote {
+    font-weight  : 900;
+    font-size    : 1.1em;
+    margin-bottom: 3em;
 
-    font-weight        : 600;
-    font-style         : normal;
+}
+
+#service-page p {
+    font-family: "Noto Serif JP", serif;
+
+    font-weight: 600;
+    font-style : normal;
 }
 
 
-.service-section-tag >span {
+.service-section-tag>span {
     color: var(--blue);
 }
 
 .service-section-content {
     margin-bottom: 2em;
+}
+
+.service-section-content h3 {
+    font-weight  : 800;
+    margin-bottom: .5em;
+}
+
+.service-section-content h4 {
+    text-decoration: underline;
+    font-weight    : 800;
+    margin-bottom  : 1em;
+    margin-left    : 1em
+}
+
+.service-section-img-wrap {
+    margin-bottom  : 2em;
+    display        : flex;
+    justify-content: space-around;
+}
+
+#service-section-content-examples {
+    margin-left: 1em;
+}
+
+@media (max-width: 800px) {
+    .service-section-img-wrap {
+        flex-direction : column;
+        width          : auto;
+        align-items    : center;
+        justify-content: center;
+        margin-bottom  : 2em;
+    }
+
+    .service-section-img-wrap img {
+        width     : 50%;
+        margin-top: 2em;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .service-section-img-wrap img {
+        width: 80%;
+
+    }
+
+    #service-title-wrap {
+        font-size: .7em;
+    }
+
+    .service-section-content h3 {
+        font-size: 1em;
+    }
 }
